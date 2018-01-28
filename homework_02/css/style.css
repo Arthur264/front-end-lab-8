@@ -35,22 +35,28 @@ write your code here
 		margin-bottom: 5px;
 	}
 	.pad{
-		padding:5px 35px;
+		padding:5px 50px;
 	}
 }
-/*task 2*/
+
 @media screen{
-	.box{
-		border: 0 !important;
-		/*outline: 1px solid silver;*/
-		position: relative;
+	/*task 2*/
+	.gallery-container .box{
+		border-left: 0 !important;
+		border-bottom: 0 !important;
+	}
+	.gallery-container .box:nth-child(3n+1){
+		border-left: 1px solid silver!important;
+	}
+	.gallery-container .box:nth-child(7),.gallery-container .box:nth-child(8), .gallery-container .box:nth-child(9){
+		border-bottom: 1px solid silver!important;
 	}
 	/*task 3*/
 	p::first-letter {
 		color: #76cdd7;
 		font-size: 30px;
 	}
-
+	/*task 4*/
 	.tm-content-box, .tm-sidebar, .blocks .tm-team-description-container{
 		box-shadow: -1px 1px 14px 1px rgba(0,0,0,0.6);
 	}
@@ -70,8 +76,13 @@ write your code here
 	h2+p{
 		font-style: italic;
 	}
-	.tm-team-description-container p:first-child{
-		color: red !important;
+	/*task 8*/
+	.tm-team-description-container p.tm-section-description::first-letter{
+		margin-left: 20px;
+
+	}
+	p.tm-section-description{
+		line-height: 30px;
 	}
 	/*task 9*/
 	.heading h2{
@@ -82,7 +93,7 @@ write your code here
 		position: relative;
 		color: black;
 	}
-	.heading ol li a:hover{
+	.heading ol li a:hover, .heading ol li a:visited:hover{
 		color: #76cdd7;
 		text-decoration: underline;
 	}
@@ -100,6 +111,9 @@ write your code here
 	.blocks .tm-content-box ul li:nth-child(odd){
 		background: #f2f2f2;
 	}
+	.blocks .gallery-container p::first-letter {
+		color: #000;
+	}
 	/*task 11*/
 	.tm-sidebar ul li{
 		border-bottom: 1px solid silver;
@@ -115,4 +129,32 @@ write your code here
 		color: red;
 	}
 
+
+}
+/*task 13*/
+@media screen and (max-width: 1140px) and (max-height: 835px){
+	.tm-sidebar{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 9999;
+	}
+	.tm-sidebar .tm-nav-item{
+		display: inline-block;
+		padding: 0px 30px;
+		width: auto;
+		border-bottom: 0;
+
+	}
+	.tm-main-nav ul{
+		display: flex;
+		justify-content: space-around;
+	}
+	.tm-main-content{
+		max-width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 80px;
+	}
 }

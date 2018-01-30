@@ -1,0 +1,130 @@
+*{
+	/*margin: 0;*/
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	/*font-family: sans-serif;*/
+	background: $bodyBackground;
+	color: $text;
+}
+h1, h2{
+	color: $title;
+}
+h1{
+	text-align: center;
+}
+img{
+	padding: 2px;
+	border: 2px solid $title;
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+	caption{
+		text-align: right;
+		@if($firstDesign == false){
+			color: $b;
+		}
+	}
+	th, td{
+		padding: 10px;
+	}
+	th{
+		text-align: left;
+		background: $tableCaption;
+		text-transform: uppercase;
+		border-right: 1px solid $contentBackground;
+		@if($firstDesign == false){
+			color: $b;
+			&:last-child{
+				border-right:0;
+			}
+		}
+	}
+	tr{
+		border-bottom: 1px solid $tableCaption;
+		@if($firstDesign == false){
+			background: $table;
+		}
+	}
+}
+a, button{
+	color: $link;
+}
+
+.img-left{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.img-right{
+	float: right;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+.brief{
+	@if($firstDesign){
+		float: left;
+		max-width: 420px;
+		display: inline-block;
+		margin-right: 15px;
+	}@else{
+		color: $b;
+		margin-bottom: 40px;
+	}
+	padding: 15px;
+	background: $briefBackground;
+		
+	}
+	#content{
+		padding: 15px 15px 20px;
+		margin:5px auto 0; 
+		background: $contentBackground;
+		max-width: 960px;
+	}
+	form{
+		font-size: 0;
+	}
+	.form-group{
+		margin-bottom: 15px;
+		font-size: 14px;
+		&--two{
+			display: inline-block;
+			width: 50%;
+			&:nth-child(odd){
+				padding-right: 5px; 
+			}
+			&:nth-child(even){
+				padding-left: 5px; 
+			}
+		}
+		label{
+			line-height: 24px;
+			text-transform: uppercase;
+			color: $input;
+		}
+		input, textarea{
+			padding:3px;
+			width: 100%;
+
+		}
+		textarea{
+			color: $input;
+			min-height: 150px;
+			resize: none;
+			padding: 5px 3px;
+			&::placeholder{
+				font-size: 11px;
+			}
+		}
+
+	}
+	button{
+		cursor: pointer;
+		background: transparent;
+		text-transform: uppercase;
+		font-size: 16px;
+		border: 1px solid $link;
+		padding: 8px 40px;
+	}

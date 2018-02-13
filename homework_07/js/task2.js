@@ -16,7 +16,17 @@ function game(){
 		}else{
 			endGame();
 		}
-	}else{}
+	}else{
+		var continueGame = confirm('New game?');
+		if(continueGame){
+			limitPrice = 5;
+			currentPrize = limitPrice * 2;
+			nullifyData();
+			game();
+		}else{
+			endGame();
+		}
+	}
 }
 //nullify data
 function nullifyData(){

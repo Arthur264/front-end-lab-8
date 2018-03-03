@@ -1,0 +1,84 @@
+/* Your styles goes here */
+*{
+	/*margin: 0;
+	padding: 0;*/
+	box-sizing: border-box;
+}
+body{
+	background-color: #222124;
+	font-family: serif;
+}
+h1, h2{
+	color: #9DA482;
+	margin-bottom: 30px;
+}
+img{
+	display: inline-block;
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+	color: #9DA482;
+	cursor: pointer;
+}
+.grid{
+	display: flex;
+	flex-wrap: wrap;
+}
+.tank{
+	padding: 10px 20px;
+	width: calc(100%/6);
+	cursor: pointer;
+}
+.tank:hover{
+	background-color: #303030;
+}
+.tank__body{
+	display: flex;
+	justify-content: center;
+	color: #D1D8B2;
+}
+.tank__body > *{
+	margin-right: 10px; 
+}
+.tank__level{
+	color: #9DA482;
+	font-weight: 600;
+}
+.tank__model{
+	text-transform: uppercase;
+	font-weight: 600;
+	white-space: nowrap;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden
+}
+.details-list{
+	display: flex;
+}
+.preview{
+	width: 50%;
+}
+.charachetistic{
+	width: 50%;
+}
+.charachetistic__table{
+	border-collapse: collapse;
+	width: 100%;
+}
+.charachetistic__table tr{
+	border: 1px solid white;
+	}
+.charachetistic__table td{
+	padding: 7px;
+	color: white;
+}
+.charachetistic__table tr td:first-child{
+	border-right: 1px solid white;
+	}
+.title-details> *{
+	margin-right: 10px;
+}
+.title-details__model{
+	text-transform: uppercase;
+}
